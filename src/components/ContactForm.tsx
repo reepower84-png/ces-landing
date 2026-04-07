@@ -170,6 +170,15 @@ export default function ContactForm() {
                 )}
               </button>
 
+              <a
+                href="http://pf.kakao.com/_nxmTdX/chat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full block text-center py-4 rounded-xl font-semibold text-lg bg-[#FEE500] text-[#3C1E1E] hover:brightness-95 transition"
+              >
+                카카오톡으로 상담하기
+              </a>
+
               {submitStatus === 'success' && (
                 <div className="p-4 bg-green-50 border border-green-200 rounded-xl text-green-700 text-center">
                   상담 신청이 완료되었습니다. 빠른 시일 내에 연락드리겠습니다.

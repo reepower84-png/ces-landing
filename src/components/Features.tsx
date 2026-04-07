@@ -113,7 +113,17 @@ export default function Features() {
               src="/videos/KakaoTalk_20251226_095552495.mp4"
               controls
               playsInline
+              autoPlay
+              muted
+              loop
               preload="metadata"
+              onTimeUpdate={(e) => {
+                const v = e.currentTarget
+                if (v.currentTime >= 97) {
+                  v.currentTime = 0
+                  v.play().catch(() => {})
+                }
+              }}
               className="w-full h-auto"
             />
           </div>

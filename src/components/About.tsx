@@ -71,6 +71,60 @@ export default function About() {
           </div>
         </div>
 
+        {/* Director Introduction */}
+        <div className="mb-16">
+          <div className="text-center mb-10">
+            <span className="inline-block text-[#4a90a4] font-semibold text-sm tracking-wider uppercase mb-3">
+              Founder & Director
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-bold text-[#1e3a5f]">대표원장 소개</h3>
+          </div>
+
+          <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl border border-gray-100 p-6 sm:p-10 shadow-sm">
+            <div className="grid md:grid-cols-[auto_1fr] gap-8 md:gap-12 items-center">
+              <div className="flex justify-center">
+                <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-2xl overflow-hidden shadow-lg ring-4 ring-white">
+                  <img
+                    src="/images/202604080122.png"
+                    alt="Christine Jin 대표원장"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="text-center md:text-left">
+                <div className="inline-block text-[#f4a261] font-semibold text-sm tracking-wider uppercase mb-2">
+                  Director
+                </div>
+                <h4 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f] mb-1">
+                  Christine Jin
+                </h4>
+                <div className="text-gray-500 mb-5">CES 대표원장</div>
+                <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
+                  25년 이상 미국 괌에서 한국 학생들의 영어 교육과 성장을 함께해온
+                  CES의 대표원장입니다. 아이 한 명 한 명의 가능성을 믿고,
+                  안전하고 따뜻한 환경에서 진짜 영어와 자신감을 키워주는 것을
+                  가장 중요한 교육 철학으로 삼고 있습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* CES Staff */}
+          <div className="mt-12">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl sm:text-3xl font-bold text-[#1e3a5f]">CES Staff</h3>
+              <p className="text-gray-500 mt-2">아이들과 함께하는 CES 선생님들</p>
+            </div>
+            <div className="rounded-3xl overflow-hidden shadow-md border border-gray-100">
+              <img
+                src="/images/202604080116.png"
+                alt="CES Staff"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Quote Section */}
         <div className="bg-gradient-to-r from-[#1e3a5f] to-[#2d5a8a] rounded-3xl p-8 sm:p-12 text-center">
           <svg className="w-12 h-12 text-white/20 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24">

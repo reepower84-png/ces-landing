@@ -102,6 +102,23 @@ export default function Features() {
           ))}
         </div>
 
+        {/* Video */}
+        <div className="mt-20">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl sm:text-3xl font-bold text-[#1e3a5f]">생생한 현장 영상</h3>
+            <p className="text-gray-500 mt-2">CES의 살아있는 교육 현장을 직접 확인해보세요</p>
+          </div>
+          <div className="max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-lg bg-black">
+            <video
+              src="/videos/KakaoTalk_20251226_095552495.mp4"
+              controls
+              playsInline
+              preload="metadata"
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
+
         {/* Quote Banner */}
         <div className="mt-20 relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#f4a261]/10 to-[#4a90a4]/10 p-8 sm:p-12">
           <div className="relative z-10 text-center">

@@ -49,6 +49,11 @@ export default function Programs() {
           <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f] mb-6">
             맞춤형 교육 프로그램
           </h2>
+          <div className="max-w-3xl mx-auto mb-8 px-4">
+            <p className="inline-block text-base sm:text-xl md:text-2xl font-bold text-[#1e3a5f] leading-snug bg-[#f4a261]/15 border-l-4 border-[#f4a261] rounded-r-xl px-5 py-4 sm:px-7 sm:py-5">
+              “수천만 원 쓰기 전, 단기간으로 직접 경험해보는<br className="sm:hidden" /> 가장 현실적인 방법”
+            </p>
+          </div>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
             학생의 연령, 수준, 목표에 맞춘 다양한 프로그램을 제공합니다.
             전문 상담을 통해 가장 적합한 프로그램을 추천받으세요.

@@ -63,6 +63,27 @@ const testimonials = [
 
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0)
+  const [touchStartX, setTouchStartX] = useState<number | null>(null)
+  const [touchEndX, setTouchEndX] = useState<number | null>(null)
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEndX(null)
+    setTouchStartX(e.targetTouches[0].clientX)
+  }
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEndX(e.targetTouches[0].clientX)
+  }
+  const handleTouchEnd = () => {
+    if (touchStartX === null || touchEndX === null) return
+    const distance = touchStartX - touchEndX
+    if (distance > 50 && activeIndex < testimonials.length - 1) {
+      setActiveIndex(activeIndex + 1)
+    } else if (distance < -50 && activeIndex > 0) {
+      setActiveIndex(activeIndex - 1)
+    }
+    setTouchStartX(null)
+    setTouchEndX(null)
+  }
 
   return (
     <section id="testimonials" className="py-24 bg-gray-50">
@@ -121,7 +142,12 @@ export default function Testimonials() {
 
           {/* Mobile Carousel */}
           <div className="md:hidden">
-            <div className="overflow-hidden">
+            <div
+              className="overflow-hidden touch-pan-y"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
               <div
                 className="flex transition-transform duration-300"
                 style={{ transform: `translateX(-${activeIndex * 100}%)` }}

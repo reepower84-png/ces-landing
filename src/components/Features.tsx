@@ -44,7 +44,7 @@ const features = [
       </svg>
     ),
     title: '다양한 체험 활동',
-    description: '해양 스포츠, 문화 탐방, 봉사활동 등 교실 밖에서 펼쳐지는 생생한 체험 학습.',
+    description: '현지 학교에서 진행되는 유일한 체험형 프로그램\n해양 스포츠, 문화 탐방, 봉사활동까지 교실 밖에서 펼쳐지는 생생한 학습 경험',
   },
   {
     icon: (
@@ -95,7 +95,7 @@ export default function Features() {
               <h3 className="text-xl font-bold text-[#1e3a5f] mb-3">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed whitespace-pre-line">
                 {feature.description}
               </p>
             </div>

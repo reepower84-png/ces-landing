@@ -3,7 +3,7 @@
 const programs = [
   {
     title: '단기 영어 캠프',
-    duration: '2-4주',
+    duration: '원데이 / 1주 / 2주 / 3주 / 4주',
     age: '초등 3학년 ~ 중등 3학년',
     description: '방학 기간을 활용한 집중 영어 캠프 프로그램. 미국 현지 환경에서 생생한 영어를 체험합니다.',
     features: ['원어민 강사 1:1 수업', '현지 문화 체험 활동', '24시간 케어 시스템', '수료증 발급'],
@@ -11,11 +11,11 @@ const programs = [
     color: 'from-blue-500 to-blue-600',
   },
   {
-    title: '정규 유학 프로그램',
-    duration: '1학기 ~ 1년',
-    age: '초등 4학년 ~ 고등 2학년',
-    description: '괌 현지 학교에서 정규 과정을 이수하며 미국 교육 시스템을 직접 경험합니다.',
-    features: ['현지 학교 정규 수업', '홈스테이 또는 기숙사', '방과후 보충 수업', '정기 학부모 상담'],
+    title: '어린이 전용 캠프',
+    duration: '1주 / 2주 / 3주 / 4주 / 5주',
+    age: '초등 1학년 ~ 초등 4학년',
+    description: '어린 학생들을 위한 맞춤형 캠프. 놀이와 액티비티 중심의 친근한 영어 학습 환경을 제공합니다.',
+    features: ['연령별 소그룹 수업', '놀이 기반 영어 학습', '24시간 안전 케어', '학부모 정기 리포트'],
     highlight: '추천',
     color: 'from-[#1e3a5f] to-[#2d5a8a]',
   },
@@ -27,6 +27,15 @@ const programs = [
     features: ['학부모 동반 가능', '가족 숙소 제공', '주말 가족 액티비티', '유연한 일정 조율'],
     highlight: '',
     color: 'from-[#4a90a4] to-[#5ba0b4]',
+  },
+  {
+    title: '개인 교습',
+    duration: '1시간 (개인) / 1시간 (4인 그룹) / 1시간 (시험준비)',
+    age: '전 학년',
+    description: '학생 개개인의 목표와 수준에 맞춘 1:1 또는 소그룹 맞춤 수업. 단기간에 집중적으로 실력을 끌어올릴 수 있습니다.',
+    features: ['개인 맞춤 커리큘럼', '4인 소그룹 수업', '시험 대비 집중 코칭', '유연한 시간 조율'],
+    highlight: '',
+    color: 'from-[#f4a261] to-[#e76f51]',
   },
 ]
 
@@ -61,7 +70,7 @@ export default function Programs() {
         </div>
 
         {/* Programs Grid */}
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8">
           {programs.map((program, index) => (
             <div
               key={index}
@@ -75,10 +84,9 @@ export default function Programs() {
                   </span>
                 )}
                 <h3 className="text-xl font-bold text-white mb-2">{program.title}</h3>
-                <div className="flex gap-4 text-white/80 text-sm">
-                  <span>{program.duration}</span>
-                  <span>|</span>
-                  <span>{program.age}</span>
+                <div className="flex flex-col gap-1 text-white/80 text-sm">
+                  <span className="break-keep">{program.duration}</span>
+                  <span className="break-keep">| {program.age}</span>
                 </div>
               </div>
 

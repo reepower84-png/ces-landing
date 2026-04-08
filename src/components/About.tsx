@@ -117,7 +117,7 @@ export default function About() {
             </div>
             <div className="rounded-3xl overflow-hidden shadow-md border border-gray-100">
               <img
-                src="/images/202604080116.png"
+                src="/images/202604081734.png"
                 alt="CES Staff"
                 className="w-full h-auto object-cover"
               />

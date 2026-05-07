@@ -70,7 +70,7 @@ export async function GET() {
   }
 }
 
-// POST - 새 문의 추가
+// POST - 새 문의 추가 (Discord 다이렉트 알림)
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
@@ -83,28 +83,10 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const { data, error } = await supabase
-      .from('inquiries')
-      .insert([
-        {
-          name,
-          phone,
-          message: message || '',
-          status: '대기중',
-        }
-      ])
-      .select()
-      .single()
-
-    if (error) {
-      console.error('Supabase error:', error)
-      return NextResponse.json({ error: 'Failed to create inquiry' }, { status: 500 })
-    }
-
-    // Send Discord notification
+    // Send Discord notification directly (no Supabase)
     await sendDiscordNotification(name, phone, message || '')
 
-    return NextResponse.json(data, { status: 201 })
+    return NextResponse.json({ success: true }, { status: 201 })
   } catch (error) {
     console.error('Failed to create inquiry:', error)
     return NextResponse.json({ error: 'Failed to create inquiry' }, { status: 500 })
